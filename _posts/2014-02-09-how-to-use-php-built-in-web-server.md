@@ -4,7 +4,7 @@ This is how it’s done, go in the directory you want to start a web server and 
 
 
 
-   php -S <IP Address>:<Port>
+    php -S <IP Address>:<Port>
 Replace IP Address with either “localhost” or anything ranging from 127.0.0.1 to 127.255.255.254 and Port with any number as the port number.
 
 
