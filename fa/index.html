@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: page
+title: fa
 lang: fa
 ---
 
-<div class="home">
-  <h1 class="page-heading">Posts</h1>
-  {% assign posts=site.posts | where:"lang", page.lang %}
-  <ul class="post-list">
+{% assign posts=site.posts | where:"lang", page.lang %}
+  <ul class="post-list" dir="rtl">
     {% for post in posts %}
       
 	  <li>
@@ -16,12 +15,12 @@ lang: fa
         <h2>
 		 
           <a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a>
+          <p>
+          {{ post.excerpt }}
+          </p>
         </h2>
       </li>
 	  
-    
+{% endfor %}    
   </ul>
-{% endfor %}
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
