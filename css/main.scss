@@ -50,3 +50,20 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+.en:lang(en), .fa:lang(fa){
+    font-weight: bold;
+}
+.inline
+{
+    list-style:none;
+    
+}
+.inline > *
+{
+    display:inline;
+}
+.tag-box
+{
+    max-width:220px;
+}

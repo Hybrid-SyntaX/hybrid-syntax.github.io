@@ -3,7 +3,8 @@ layout: post
 title:  "Hello, World!"
 name: hello-world
 date:   2013-09-04 10:27:27
-categories: Random
+categories: 
+- Random
 lang: en
 ---
 

@@ -3,8 +3,10 @@ layout: post
 title:  "Localizing Dates and Numbers in PHP"
 name: localizing-dates-and-numbers-in-php
 date:   2013-09-05 10:27:27
-categories: PHP Web-Dev
-tags: i18n, internationalization, locale, localization, php 
+categories: 
+- PHP 
+- Web Dev
+tags: i18n internationalization locale localization php
 lang: en
 ---
 There are times that English isn’t just the only language in the world, and Gregorian calendar isn’t just the only calendar out there! What would you do in such situation?

@@ -7,7 +7,9 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://hybridsyntax.com" # the base hostname & protocol for your site
 twitter_username: hybrid_syntax
 github_username:  hybrid-syntax
-
+author: Abbas Allahyari
+linkedin_url : ir.linkedin.com/pub/abbas-allahyari/69/b09/660
+googleplus_url: https://plus.google.com/u/0/117835603692279264063/
 # Build settings
 markdown: kramdown
 encoding: utf-8
@@ -23,10 +25,27 @@ defaults:
       lang: en
   -
     scope:
-      path: _posts/fa
+      path: fa/_posts/fa
     values:
       layout: default
       lang: fa
 
+t:
+  en:
+    home:
+      name: "Home"
+      url: "/"
+    about:
+      name: "About"
+      url: "/about/"
+  fr:
+    home:
+      name: "Accueil"
+      url: "/accueil/"
+    about:
+      name: "À propos"
+      url: "/a-propos/"
+  
+  
 permalink: /:title/
 
