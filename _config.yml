@@ -1,5 +1,6 @@
 # Site settings
 title: Hybrid SyntaX
+name: Hybrid SyntaX
 email: abbas@hybridsyntax.com
 description: > # this means to ignore newlines until "baseurl:"
   Abbas Allahyari's personal blog
@@ -38,14 +39,16 @@ t:
     about:
       name: "About"
       url: "/about/"
-  fr:
+  fa:
     home:
-      name: "Accueil"
-      url: "/accueil/"
+      name: "خانه"
+      url: "/fa/"
     about:
-      name: "À propos"
-      url: "/a-propos/"
+      name: "درباره من"
+      url: "/about/"
   
   
-permalink: /:title/
+permalink: /blog/:title/
+category_archive:
+    path: category
 

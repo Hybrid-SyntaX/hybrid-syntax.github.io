@@ -3,6 +3,7 @@ layout: post
 title:  "Localizing Dates and Numbers in PHP"
 name: localizing-dates-and-numbers-in-php
 date:   2013-09-05 10:27:27
+author: Abbas Allahyari
 categories: 
 - PHP 
 - Web Dev
@@ -47,7 +48,7 @@ And now you get the today’s date in Persian calendar which is
 
     پنجشنبه، ۱۴ شهریور ۱۳۹۲
 
-For more info on dates format you may take a look at (icu::SimpleDateFormat Class Reference)[http://icu-project.org/apiref/icu4c/classSimpleDateFormat.html].
+For more info on dates format you may take a look at [icu::SimpleDateFormat Class Reference](http://icu-project.org/apiref/icu4c/classSimpleDateFormat.html).
 
 Localizing numbers
 
