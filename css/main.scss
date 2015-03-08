@@ -57,7 +57,7 @@ $on-laptop:        800px;
 .inline
 {
     list-style:none;
-    
+
 }
 .inline > *
 {
@@ -75,4 +75,21 @@ pre
 {
     background-color:#F9F9F9;
     overflow-x:auto;
+}
+.home[lang='fa']
+{
+  direction: rtl;
+}
+.tags
+{
+
+}
+.tags a
+{
+  background-color:#F9F9F9;
+  padding: 5px;
+}
+.tags a:hover
+{
+  background-color:#C9C9C9;
 }

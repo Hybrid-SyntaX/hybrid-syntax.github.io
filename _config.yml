@@ -46,9 +46,16 @@ t:
     about:
       name: "درباره من"
       url: "/about/"
-  
-  
-permalink: /blog/:title/
-category_archive:
-    path: category
 
+
+permalink: /blog/:title/
+
+slugify: true
+
+metas:
+  tag:
+    slugify: false
+    plural: tags
+  category:
+    slugify: true
+    plural: categories
