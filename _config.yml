@@ -20,16 +20,18 @@ auto: true
 defaults:
   -
     scope:
-      path: _posts/en
-    values:
-      layout: default
+      type: posts
       lang: en
+    values:
+      permalink: /en/blog/:title
   -
     scope:
-      path: fa/_posts/fa
-    values:
-      layout: default
+      type: posts
       lang: fa
+    values:
+      permalink: /fa/blog/:title
+
+
 
 t:
   en:
@@ -48,7 +50,7 @@ t:
       url: "/about/"
 
 
-permalink: /blog/:title/
+
 
 slugify: true
 
