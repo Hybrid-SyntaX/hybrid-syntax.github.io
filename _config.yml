@@ -23,13 +23,13 @@ defaults:
       type: posts
       path: "en"
     values:
-      permalink: /en/blog/['categories']/:title/
+      permalink: "/en/blog/:categories/:title/"
   -
     scope:
       type: posts
       path: "fa"
     values:
-      permalink: /fa/blog/['categories']/:title/
+      permalink: "/fa/blog/:categories/:title/"
 
 
 
