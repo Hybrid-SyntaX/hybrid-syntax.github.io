@@ -6,7 +6,13 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if site.author %} • {{ site.author }}{% endif %}</p>
     <p class="post-meta">
-      <p>{{ page.categories | breadcrumb: page.lang }}</p>
+
+
+
+
+      {% include breadcrumb.html %}
+
+
     </p>
   </header>
 
