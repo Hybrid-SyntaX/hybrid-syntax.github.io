@@ -23,6 +23,7 @@ defaults:
       type: posts
       path: "en"
     values:
+      layout: default
       permalink: en/blog/:title
 
   -
@@ -30,6 +31,7 @@ defaults:
       type: posts
       path: "fa"
     values:
+      layout: default
       permalink: fa/blog/:title
 
 
