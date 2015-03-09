@@ -22,16 +22,14 @@ defaults:
     scope:
       type: posts
       path: "en"
-      lang: en
     values:
-      permalink: /en/blog/:title
+      permalink: /en/blog/:title/
   -
     scope:
       type: posts
       path: "fa"
-      lang: fa
     values:
-      permalink: /fa/blog/:title
+      permalink: /fa/blog/:title/
 
 
 
