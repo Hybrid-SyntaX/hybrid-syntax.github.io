@@ -1,0 +1,15 @@
+{% assign last_cat="" %}
+<a href='http://hybridsyntax.com'>Hybrid SyntaX</a>
+{% for cat in page.categories %}
+  {% assign last_cat=last_cat | append: '/' | append: cat %}
+  {% assign url= '/' | append: page.lang  | append: '/category/' | append: last_cat | replace: ' ','-' | replace : '//','/' %}
+
+  {% if site.data.specialcase[cat] %}
+    {% assign cat_title=site.data.specialcase[cat] %}
+  {% else %}
+    {% assign cat_title=cat | capitalize %}
+  {% endif %}
+
+  \&nbsp;<a href='{{url}}'>{{cat_title}}</a>
+  {% assign last_cat=cat %}
+{% endfor %}
