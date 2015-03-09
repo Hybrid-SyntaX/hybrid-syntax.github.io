@@ -23,16 +23,15 @@ defaults:
       type: posts
       path: "en"
     values:
-      permalink: :title
+
   -
     scope:
       type: posts
       path: "fa"
     values:
-      permalink: :title
+
 
 permalink: :title
-
 
 t:
   en:
