@@ -16,7 +16,7 @@
 
 
 
-{% if page.isCategory or page.isTag %}
+{% if page.url contains "/category" or page.url contains "/tag" %}
 
 
   {% assign categories=url_breadcrumb_split  %}
@@ -42,6 +42,9 @@
 
 
 
+
+
+  {% if page.url contains "/category" or page.url contains "/tag" %}
     {% if cat != categories.first %}
 
 
@@ -55,11 +58,14 @@
 
 
       {% endif %}
+{% else %}
+<li><a href='{{url}}'>{{cat_title | replace:'-',' '}}</a></li>
+
+{% endif %}
 
 
 
-
-  {% assign last_cat=cat %}
+    {% assign last_cat=cat %}
 
 
 {% endfor %}
