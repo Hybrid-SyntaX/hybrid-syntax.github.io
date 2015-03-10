@@ -1,4 +1,12 @@
-<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<span class="post-meta">
+  {% if page.lang=='en' %}
+    FFF
+    {{ page.date | date: "%b %-d, %Y" }}
+  {% else %}
+    AA
+    {{ page.jalali_date }}
+  {% endif %}
+</span>
 <h2>
 
   <a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a>
