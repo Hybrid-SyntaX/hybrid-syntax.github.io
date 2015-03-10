@@ -72,12 +72,14 @@ code
 {
     background-color:#F9F9F9;
     direction:ltr;
+    font-size:10pt;
 }
 pre
 {
     background-color:#F9F9F9;
     overflow-x:auto;
     direction:ltr;
+    font-size:10pt;
 }
 .home[lang='fa'], .post[lang='fa']
 {
@@ -120,4 +122,8 @@ pre
 .social-media-list
 {
   width: 160px;
+}
+article.post p
+{
+  font-size:18pt !important;
 }
