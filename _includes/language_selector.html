@@ -1,0 +1,24 @@
+{% assign post=include.post %}
+{% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
+
+{% if page.layout == "page" %}
+
+{% for post in posts %}
+    {% if post.lang == page.lang %}
+      <li class="active"><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}" >&nbsp;/{{ post.lang }}</a></li>
+    {% else %}
+      <li><a href="{{ post.url }}" lang="{{ post.lang }}" class="{{ post.lang }}">&nbsp;/{{ post.lang }}</a></li>
+    {% endif %}
+{% endfor %}
+
+{% else %}
+
+{% for lang in site.data.languages %}
+  {% if lang[0] == page.lang %}
+  <li class="active"><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}" >&nbsp;/{{ lang[0] }}</a></li>
+  {% else %}
+  <li><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}">&nbsp;/{{ lang[0] }}</a></li>
+  {% endif %}
+{% endfor %}
+
+{% endif %}

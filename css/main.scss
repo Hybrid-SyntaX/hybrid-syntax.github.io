@@ -109,7 +109,19 @@ footer[lang='fa']
   position: relative;
   left: 10px;
 }
-#categories , #categories ul
+#categories *
 {
   list-style:none;
+}
+.post-excerpt[lang="en"]
+{
+  font-size:14pt !important;
+}
+.post-excerpt[lang="fa"]
+{
+  font-size:18pt !important;
+}
+.social-media-list
+{
+  width: 160px;
 }
