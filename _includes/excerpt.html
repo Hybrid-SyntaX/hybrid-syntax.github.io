@@ -1,12 +1,12 @@
+<span class="post-meta">
+  {% if post.jalali_date %}
+    {{ post.jalali_date }}
+  {% else %}
+    {{ post.date | date: "%b %-d, %Y" }}
+  {% endif %}
+</span>
 <h2>
   <a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a>
-  <span class="post-meta">
-    {% if post.jalali_date %}
-      {{ post.jalali_date }}
-    {% else %}
-      {{ post.date | date: "%b %-d, %Y" }}
-    {% endif %}
-  </span>
   <p>
   {{ post.excerpt }}
   </p>
