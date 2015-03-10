@@ -4,23 +4,8 @@ title: fa
 lang: fa
 ---
 
-{% assign posts=site.posts | where:"lang", page.lang %}
-  <ul class="post-list" dir="rtl">
-    {% for post in posts %}
-      
-	  <li>
-	  
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<div class="home" lang="{{ page.lang }}">
+  {% include posts_list.html posts=site.posts %}
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-        <h2>
-		 
-          <a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a>
-          <p>
-          {{ post.excerpt }}
-          </p>
-        </h2>
-      </li>
-	  
-{% endfor %}    
-  </ul>
-
+</div>
