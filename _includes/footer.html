@@ -9,36 +9,35 @@
         <ul class="contact-list">
             <li>{{ site.data.languages[page.lang].words.categories }}
                <ul class="tag-box inline">
-                {% assign tags_list = site.categories %}
-                  {% if tags_list.first[0] == null %}
-                    {% for tag in tags_list %}
-                      <li><a href="/{{ page.lang }}/category/{{ tag | replace: ' ','-' }}">{{ tag | capitalize  }} (<span>{{ site.tags[tag].size }}</span>)</a></li>
-                    {% endfor %}
-                  {% else %}
-                    {% for tag in tags_list %}
-                      <li><a href="/{{ page.lang }}/category/{{ tag[0]  | replace: ' ','-' }}">{{ tag[0] | capitalize}} (<span>{{ tag[1].size }})</span></a></li>
-                    {% endfor %}
-                  {% endif %}
-                {% assign tags_list = nil %}
+                    <!--{% for tag in site.categories %}
+                      <li><a href="/{{ page.lang }}/category/{{ tag[0]  | slugify }}">{{ tag[0] | capitalize}} (<span>{{ tag[1].size }})</span></a></li>
+                    {% endfor %}-->
+                    <!--
+                    {% assign cats=site.data.categories %}
+                    {% for cat in cats %}
+                        -{{ cat[0] }}<br/>
+                         {% assign cats=cat[1] %}
 
 
+                    {% endfor %}
+
+                    {% for cat2 in cat[1] %}
+                      --{{ cat2[0] }}<br/>
+
+                      {% for cat3 in cat2[1] %}
+                        --{{ cat3[0] }}<br/>
+                      {% endfor %}
+                    {% endfor %}
+                  -->
+                  {% assign lang=page.lang %}
+                  <p>{% render_categories en %}</p>
                 </ul>
             </li>
             <li>{{ site.data.languages[page.lang].words.tags }}
                <ul class="tag-box inline">
-                {% assign tags_list = site.tags %}
-                  {% if tags_list.first[0] == null %}
-                    {% for tag in tags_list %}
-                      <li><a href="/{{ page.lang }}/tag/{{ tag }}">{{ tag }} (<span>{{ site.tags[tag].size }}</span>)</a></li>
-                    {% endfor %}
-                  {% else %}
-                    {% for tag in tags_list %}
+                    {% for tag in site.tags %}
                       <li><a href="/{{ page.lang }}/tag/{{ tag[0] }}">{{ tag[0]}} (<span>{{ tag[1].size }})</span></a></li>
                     {% endfor %}
-                  {% endif %}
-                {% assign tags_list = nil %}
-
-
                 </ul>
             </li>
         </ul>

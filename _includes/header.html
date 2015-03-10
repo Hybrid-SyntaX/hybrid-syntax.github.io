@@ -13,6 +13,17 @@
           <a style="color:blue;" href="{{ post.url }}" lang="{{ post.lang }}" class="{{ post.lang }}">&nbsp;/{{ post.lang }}</a>
         {% endif %}
     {% endfor %}
+
+
+
+    {% for lang in site.data.languages %}
+      {% if lang[0] == page.lang %}
+      <span style="color:black;">&nbsp;/{{ lang[0] }}</span>
+      {% else %}
+      <a style="color:blue;" href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}">&nbsp;/{{ lang[0] }}</a>
+      {% endif %}
+    {% endfor %}
+
     </div>
 
     <nav class="site-nav">
