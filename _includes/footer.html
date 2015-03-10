@@ -8,28 +8,7 @@
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
             <li>{{ site.data.languages[page.lang].words.categories }}
-               <ul class="tag-box inline">
-                    <!--{% for tag in site.categories %}
-                      <li><a href="/{{ page.lang }}/category/{{ tag[0]  | slugify }}">{{ tag[0] | capitalize}} (<span>{{ tag[1].size }})</span></a></li>
-                    {% endfor %}-->
-                    <!--
-                    {% assign cats=site.data.categories %}
-                    {% for cat in cats %}
-                        -{{ cat[0] }}<br/>
-                         {% assign cats=cat[1] %}
-
-
-                    {% endfor %}
-
-                    {% for cat2 in cat[1] %}
-                      --{{ cat2[0] }}<br/>
-
-                      {% for cat3 in cat2[1] %}
-                        --{{ cat3[0] }}<br/>
-                      {% endfor %}
-                    {% endfor %}
-                  -->
-                  {% assign lang=page.lang %}
+               <ul id="categories">
                   <p>{% render_categories en %}</p>
                 </ul>
             </li>
