@@ -72,10 +72,8 @@ paginate_path: "/blog/page:num/"
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
-<<<<<<< HEAD
+
 exclude: [fa/category,fa/tag,en/category,en/tag]
 
 tag_title_prefix: Tag
 category_title_prefix: Category
-=======
->>>>>>> origin/master
