@@ -15,23 +15,24 @@
 
       </a>
 
+
       <div class="trigger">
-      <nav>
+        <!--
       {% assign pages= site.pages | where: 'layout','page'  %}
         {% for page in pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
+      -->
 
+		    {% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
 
-		{% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
-
-		{% for post in posts %}
-				<a href="{{ post.url }}" lang="{{ post.lang }}" class="{{ post.lang }}">{{ post.lang }}</a>
-		{% endfor %}
-      </nav>
+    		{% for post in posts %}
+    				<a href="{{ post.url }}" lang="{{ post.lang }}" class="{{ post.lang }}">{{ site.data.languages[post.lang].name }}</a>
+    		{% endfor %}
       </div>
+
 
 
     </nav>
