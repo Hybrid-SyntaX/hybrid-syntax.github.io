@@ -69,4 +69,5 @@ metas:
 paginate: 1
 paginate_path: "/blog/page:num/"
 
-#gems: jalalidate
+#gems:
+#  -jalalidate

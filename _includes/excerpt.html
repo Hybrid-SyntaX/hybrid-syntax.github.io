@@ -5,7 +5,7 @@
     {{ post.date | date: "%b %-d, %Y" }}
   {% endif %}
 </span>
-
+{{ post.date | jdate: "%A %d %b %Y"}}
 <h2>
   <a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a>
   <p>
