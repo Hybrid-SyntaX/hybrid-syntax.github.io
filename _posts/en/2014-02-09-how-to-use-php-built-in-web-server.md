@@ -3,7 +3,8 @@ layout: post
 title:  "How to use PHP Built-in web server"
 name: how-to-use-php-built-in-web-server
 date:   2014-02-09 10:27:27
-categories: 
+permalink: /en/blog/how-to-use-php-built-in-web-server
+categories:
 - Web Dev
 - PHP
 tags: php web-server

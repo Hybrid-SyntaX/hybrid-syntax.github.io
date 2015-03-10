@@ -3,10 +3,11 @@ layout: post
 title:  "Localizing Dates and Numbers in PHP"
 name: localizing-dates-and-numbers-in-php
 date:   2013-09-05 10:27:27
+permalink: /en/blog/localizing-dates-and-numbers-in-php
 author: Abbas Allahyari
-categories: 
+categories:
 - Web Dev
-- PHP 
+- PHP
 tags: i18n internationalization locale localization php
 lang: en
 ---
@@ -35,11 +36,11 @@ Now you use [IntlDateFormatter class](http://php.net/manual/en/class.intldatefor
 
 
     $date_format='EEEE، d MMMM Y';
-	
+
     $fmt = new IntlDateFormatter("fa_IR@calendar=persian", IntlDateFormatter::FULL, IntlDateFormatter::FULL,
-	
+
     "Asia/Tehran", IntlDateFormatter::TRADITIONAL,$date_format);
-	
+
      echo $fmt->format(intval(time()));
 
 And now you get the today’s date in Persian calendar which is
