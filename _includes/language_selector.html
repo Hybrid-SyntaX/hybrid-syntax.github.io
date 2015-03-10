@@ -1,8 +1,10 @@
 {% assign post=include.post %}
+{% assign pages=site.pages | where:"page_name", page.page_name | sort: 'path' %}
 {% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
 
-{% if page.layout == "page" %}
 
+
+{% if page.url contains "/blog" %}
 {% for post in posts %}
     {% if post.lang == page.lang %}
       <li class="active"><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}" >&nbsp;/{{ post.lang }}</a></li>
@@ -13,6 +15,15 @@
 
 {% else %}
 
+{% for post in pages %}
+    {% if post.lang == page.lang %}
+      <li class="active"><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}" >&nbsp;/{{ post.lang }}</a></li>
+    {% else %}
+      <li><a href="{{ post.url }}" lang="{{ post.lang }}" class="{{ post.lang }}">&nbsp;/{{ post.lang }}</a></li>
+    {% endif %}
+{% endfor %}
+{% endif %}
+<!--
 {% for lang in site.data.languages %}
   {% if lang[0] == page.lang %}
   <li class="active"><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}" >&nbsp;/{{ lang[0] }}</a></li>
@@ -20,5 +31,4 @@
   <li><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}">&nbsp;/{{ lang[0] }}</a></li>
   {% endif %}
 {% endfor %}
-
-{% endif %}
+-->
