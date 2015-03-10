@@ -1,5 +1,16 @@
 fa:
   name: فارسی
+  words:
+    categories: دسته بندی ها
+    category: دسته بندی
+    tags: برچسب ها
+    tag: برچسب
+
 en:
   name: English
   default: true
+  words:
+    categories: Categories
+    category: Category
+    tags: Tags
+    tag: Tag

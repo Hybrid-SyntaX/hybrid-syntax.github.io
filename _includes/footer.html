@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer" lang="{{ page.lang }}">
 
   <div class="wrapper">
 
@@ -7,7 +7,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-            <li>Categories
+            <li>{{ site.data.languages[page.lang].words.categories }}
                <ul class="tag-box inline">
                 {% assign tags_list = site.categories %}
                   {% if tags_list.first[0] == null %}
@@ -24,7 +24,7 @@
 
                 </ul>
             </li>
-            <li>Tags
+            <li>{{ site.data.languages[page.lang].words.tags }}
                <ul class="tag-box inline">
                 {% assign tags_list = site.tags %}
                   {% if tags_list.first[0] == null %}
