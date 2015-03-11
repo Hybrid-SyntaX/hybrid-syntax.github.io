@@ -2,9 +2,9 @@
 <ol class="breadcrumb" style="margin-left:0px;">
 <li><a href='http://hybridsyntax.com'>Hybrid SyntaX</a></li>
 
-{% if page.url contains "/category" and page.isCategory %}
+{% if page.url contains site.category_dir and page.isCategory %}
   {% assign type_literal="&nbsp;Category" %}
-{% else if page.url contains "/tag" and page.isTag %}
+{% else if page.url contains site.tag_dir and page.isTag %}
   {% assign type_literal="&nbsp;Tag" %}
 {% else %}
   {% assign type_literal="" %}
@@ -16,7 +16,7 @@
 
 
 
-{% if page.url contains "/category" or page.url contains "/tag" %}
+{% if page.url contains site.category_dir or page.url contains site.tag_dir %}
 
 
   {% assign categories=url_breadcrumb_split  %}
@@ -31,11 +31,13 @@
 {% for cat in categories %}
 
   {% assign last_cat=last_cat | append: '/' | append: cat %}
-  {% if page.url contains "/category" %}
-  {% assign url= '/' | append: page.lang  | append: '/' | append:  site.category_dir | append: '/' | append: last_cat | replace: ' ','-' | replace : '//','/' | strip %}
+
+  {% if page.url contains site.tag_dir and page.isTag %}
+    {% assign mid_dir=site.tag_dir %}
   {% else %}
-  {% assign url= '/' | append: page.lang  | append: '/' | append:  site.tag_dir | append: '/' | append: last_cat | replace: ' ','-' | replace : '//','/' | strip %}
+    {% assign mid_dir=site.category_dir %}
   {% endif %}
+  {% assign url= '/' | append: page.lang  | append: '/' | append: mid_dir | append: '/' | append: last_cat | replace: ' ','-' | replace : '//','/' | strip %}
 
   {% if site.data.specialcase[cat] %}
     {% assign cat_title=site.data.specialcase[cat] %}
@@ -61,11 +63,11 @@
 
 
 
-      {% endif %}
-{% else %}
-<li><a href='{{url}}'>{{cat_title | replace:'-',' '}}</a></li>
+    {% endif %}
+  {% else %}
+  <li><a href='{{url}}'>{{cat_title | replace:'-',' '}}</a></li>
 
-{% endif %}
+  {% endif %}
 
 
 

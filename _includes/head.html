@@ -3,8 +3,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <title>{% if page.title %}{{ page.title }}&nbsp;|&nbsp;{{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+
 
 
 
@@ -21,10 +22,19 @@
   <link rel="stylesheet" href="{{ "/assets/bootstrap/css/bootstrap-theme.min.css" | prepend: site.baseurl }}">
 
 
-{% assign posts=site.posts | where:"name", page.name %}
-	{% for post in posts %}
-	{% if post.lang != page.lang %}
-		<link rel="alternate" hreflang="{{post.lang}}" href="{{ post.url  | prepend: site.baseurl }}" />
-	{% endif %}
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
+  <meta name="author" content="{{ site.author }}">
+
+{% if page.isCategory or page.isTag or page.isPage %}
+  {% assign things=site.pages | where:"page_name", page.page_name | sort: 'path' %}
+{% else %}
+  {% assign things=site.posts | where:"name", page.name | sort: 'path' %}
+{% endif %}
+
+{% for post in things %}
+  {% if page.lang != post.lang %}
+  <link rel="alternate" hreflang="{{post.lang}}" href="{{ post.url  | prepend: site.baseurl }}" />
+  {% endif %}
 {% endfor %}
+
 </head>

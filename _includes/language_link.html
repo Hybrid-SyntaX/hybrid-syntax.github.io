@@ -1,0 +1,6 @@
+{% assign post=include.post %}
+{% if post.lang == page.lang %}
+  <li class="active"><a href="/{{ lang[0] }}" lang="{{ lang[0] }}" class="{{ lang[0] }}" >&nbsp;/{{ post.lang }}</a></li>
+{% else %}
+  <li><a href="{{ post.url }}" lang="{{ post.lang }}" class="{{ post.lang }}">&nbsp;/{{ post.lang }}</a></li>
+{% endif %}
