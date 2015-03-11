@@ -11,7 +11,7 @@
 {% endif %}
 
 {% assign url_breadcrumb_split=page.url | remove: '/en' | remove : '/fa'  | remove: '/index.html' %}
-{% assign url_breadcrumb_split=url_breadcrumb_split | remove :'/category' | remove: '/tag' %}
+{% assign url_breadcrumb_split=url_breadcrumb_split | remove :'/category' | remove: '/tag' | remove: '/blog' %}
 {% assign url_breadcrumb_split=url_breadcrumb_split | strip | split: '/' %}
 
 
@@ -31,7 +31,11 @@
 {% for cat in categories %}
 
   {% assign last_cat=last_cat | append: '/' | append: cat %}
-  {% assign url= '/' | append: page.lang  | append: '/category/' | append: last_cat | replace: ' ','-' | replace : '//','/' | strip %}
+  {% if page.url contains "/category" %}
+  {% assign url= '/' | append: page.lang  | append: '/' | append:  site.category_dir | append: '/' | append: last_cat | replace: ' ','-' | replace : '//','/' | strip %}
+  {% else %}
+  {% assign url= '/' | append: page.lang  | append: '/' | append:  site.tag_dir | append: '/' | append: last_cat | replace: ' ','-' | replace : '//','/' | strip %}
+  {% endif %}
 
   {% if site.data.specialcase[cat] %}
     {% assign cat_title=site.data.specialcase[cat] %}

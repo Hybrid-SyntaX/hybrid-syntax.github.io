@@ -9,7 +9,7 @@ isCategory: true
 
 {% assign meta_value_index=meta_split_len | minus: 2 %}
 
-{% assign meta_name=meta_split[2] %}
+{% assign meta_name=meta_split[3] %}
 
 {% assign meta_value=meta_split[meta_value_index] %}
 
@@ -26,6 +26,6 @@ isCategory: true
 
 {% include posts_list.html posts=posts_in_tag %}
 
-  
+
 
 </div>

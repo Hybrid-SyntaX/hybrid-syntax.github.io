@@ -28,7 +28,7 @@ layout: default
   <section class="tags">
 
   {% for tag in page.tags %}
-    <a href="/{{ page.lang }}/tag/{{ tag }}">{{ tag }}</a>
+    <a href="/{{ page.lang }}/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
   {% endfor %}
 
   </section>

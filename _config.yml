@@ -77,3 +77,5 @@ exclude: [fa/category,fa/tag,en/category,en/tag]
 
 tag_title_prefix: Tag
 category_title_prefix: Category
+tag_dir: blog/tag
+category_dir: blog/category
