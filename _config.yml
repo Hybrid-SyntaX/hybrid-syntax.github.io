@@ -66,9 +66,6 @@ metas:
     slugify: true
     plural: categories
 
-paginate: 1
-paginate_path: "/blog/page:num/"
-
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
