@@ -33,7 +33,11 @@ layout: default
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
+        {% if lang.page == 'en' %}
+        var disqus_shortname = 'hybridsyntaxenglish';
+        {% else if lang.page =='fa' %}
         var disqus_shortname = 'hybridsyntax';
+        {% endif %}
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
