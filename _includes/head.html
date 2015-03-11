@@ -37,4 +37,17 @@
   {% endif %}
 {% endfor %}
 
+<script  type="text/javascript">
+
+{% if lang.page == 'en' %}
+var disqus_shortname = 'hybridsyntaxenglish';
+{% else if lang.page =='fa' %}
+var disqus_shortname = 'hybridsyntax';
+{% endif %}
+
+var disqus_config = function () {
+  this.language = "{{ page.lang }}";
+};
+
+</script>
 </head>
