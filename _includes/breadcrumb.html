@@ -26,7 +26,7 @@
 {% assign categories.last="Category" %}
 
 {% if page.url contains site.tag_dir and page.isTag %}
-  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | slugify }}'>{{ url_breadcrumb_split.last }}</a></li>
+  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | slugify }}'>/{{ url_breadcrumb_split.last }}</a></li>
 {% else %}
   {% include category_menu.html cat=cat cats=categories %}
 {% endif %}
