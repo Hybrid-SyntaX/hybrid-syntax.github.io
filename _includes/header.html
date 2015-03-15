@@ -22,42 +22,46 @@
             <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Link</a></li>-->
             {% include language_selector.html post=post %}
+
+            {% include breadcrumb.html %}
             <!--<li><a href="#">/en</a></li>
             <li><a href="#">/fa</a></li>-->
 
 
           </ul>
+            <!--
           <ul class="nav navbar-nav navbar-right">
             {% for cat in site.data.categories %}
 
-            {% if site.data.specialcase[cat] %}
-              {% assign cat_name=site.data.specialcase[cat] %}
-            {% else %}
-              {% assign cat_name=cat[0] %}
-            {% endif %}
-            <li>
-                <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >{{ cat_name }}<span class="caret"></span></a>
-                <ul class='dropdown-menu' role='menu'>
-                  {% for subcat in cat[1] %}
-                  {% if site.data.specialcase[subcat[0]] %}
-                    {% assign subcat_name=site.data.specialcase[subcat[0]] %}
-                  {% else %}
-                    {% assign subcat_name=subcat[0] %}
-                  {% endif %}
-                    <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}">{{ subcat_name }}</a></li>
-                  {% endfor %}
-                </ul>
+              {% if site.data.specialcase[cat] %}
+                {% assign cat_name=site.data.specialcase[cat] %}
+              {% else %}
+                {% assign cat_name=cat[0] %}
+              {% endif %}
+              <li>
+                  <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >{{ cat_name }}<span class="caret"></span></a>
+                  <ul class='dropdown-menu' role='menu'>
+                    {% for subcat in cat[1] %}
+                    {% if site.data.specialcase[subcat[0]] %}
+                      {% assign subcat_name=site.data.specialcase[subcat[0]] %}
+                    {% else %}
+                      {% assign subcat_name=subcat[0] %}
+                    {% endif %}
+                      <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}">{{ subcat_name }}</a></li>
+                    {% endfor %}
+                  </ul>
 
-            </li>
+              </li>
             {% endfor %}
 
           </ul>
+        -->
+
 
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
 
     </nav>
-    {% include breadcrumb.html %}
 </div>
 
 </header>
