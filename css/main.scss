@@ -91,14 +91,27 @@ pre
 {
 
 }
-.tags a
+.tags li
 {
   background-color:#F9F9F9;
   padding: 5px;
+  font-family: serf !important;
+  font-size: 14pt;
+
 }
-.tags a:hover
+.tags a, .tags a:visited
+{
+  color:#828282;
+}
+.tags .glyphicon-tags:before
+{
+  margin: 10px;
+  font-size: 75%;
+}
+.tags li:hover , .tags a:hover
 {
   background-color:#C9C9C9;
+  color: #333333;
 }
 #language-selecter
 {
@@ -128,4 +141,13 @@ pre
 .post-content[lang="fa"]
 {
   font-size:18pt !important;
+}
+#logo
+{
+  background: url('/favicon.png');
+  background-repeat: no-repeat;
+  background-size: 40px;
+  padding-left: 55px;
+  background-position-y: 50%;
+  background-position-x: 5%;
 }

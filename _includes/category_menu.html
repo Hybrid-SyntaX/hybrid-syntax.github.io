@@ -1,7 +1,12 @@
 {% assign current_cat=include.cat | replace: '-',' ' | downcase %}
 {% assign cats=include.cats %}
 
+{% if page.isCategory and page.url contains site.category_dir %}
+{% include main_category_menu.html %}
+{% endif %}
 {% for cat in site.data.categories %}
+
+
   {% assign slugged_cat=cat[0] | slugify %}
   {%  for url_cat in cats %}
     {% assign slugified_url_cat=url_cat | slugify %}

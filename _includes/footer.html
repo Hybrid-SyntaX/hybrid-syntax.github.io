@@ -9,13 +9,21 @@
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
 
-            <li>Tags
-               <ul class="tag-box inline">
-                    {% for tag in site.tags %}
-                      <li><a href="/{{ page.lang }}/{{ site.tag_dir }}/{{ tag[0] }}">{{ tag[0]}} (<span>{{ tag[1].size }})</span></a></li>
-                    {% endfor %}
-                </ul>
-            </li>
+          <li>Categories
+             <ul class="tag-box inline">
+                  {% for cat in site.data.categories %}
+                    <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | slugify }}">{{ cat[0]}} (<span>{{ cat[1].size }})</span></a></li>
+                  {% endfor %}
+              </ul>
+          </li>
+
+          <li>Tags
+             <ul class="tag-box inline">
+                  {% for tag in site.tags %}
+                    <li><a href="/{{ page.lang }}/{{ site.tag_dir }}/{{ tag[0] }}">{{ tag[0]}} (<span>{{ tag[1].size }})</span></a></li>
+                  {% endfor %}
+              </ul>
+          </li>
         </ul>
 
       </div>

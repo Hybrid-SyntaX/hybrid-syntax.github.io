@@ -6,14 +6,16 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
 
+      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
       {% if page.lang == "en" %}
         {{ page.date | date: "%b %-d, %Y" }}
       {% else %}
         {{ page.jalali_date }}
       {% endif %}
 
-      {% if site.author %} • {{ site.author }}{% endif %}
-      </p>
+
+      {% if site.author %} • <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ site.author }}{% endif %}
+    </p>
 
   </header>
 
@@ -21,13 +23,13 @@ layout: default
     {{ content }}
   </article>
 
-  <section class="tags">
+  <ul class="tags list-inline">
 
   {% for tag in page.tags %}
-    <a href="/{{ page.lang }}/{{ site.tag_dir }}/{{ tag }}">{{ tag }}</a>
+    <li><a href="/{{ page.lang }}/{{ site.tag_dir }}/{{ tag }}"><span class="glyphicon glyphicon-tags" aria-hidden="true" ><span>{{ tag }}</a></li>
   {% endfor %}
 
-  </section>
+  </ul>
 
   <section class="comments">
     <div id="disqus_thread"></div>
