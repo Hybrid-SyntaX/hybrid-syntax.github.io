@@ -20,7 +20,8 @@
 
   <link rel="stylesheet" href="{{ "/assets/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/bootstrap/css/bootstrap-theme.min.css" | prepend: site.baseurl }}">
-  <link rel="author" href="http://https//plus.google.com/u/0/117835603692279264063/" />
+
+
 
 
   <meta name="keywords" content="{{ page.tags | join: ',' }}">
@@ -30,6 +31,7 @@
   {% assign things=site.pages | where:"page_name", page.page_name | sort: 'path' %}
 {% else %}
   {% assign things=site.posts | where:"name", page.name | sort: 'path' %}
+  <link rel="author" href="http://https//plus.google.com/u/0/117835603692279264063/" />
 {% endif %}
 
 {% for post in things %}
