@@ -120,9 +120,9 @@ You can always refer to the references listed below for the most up-to-date info
 
 [EpicGamesOrg]: https://github.com/EpicGames "Epic Games Organization"
 
-[unreal-engine-account-dashboard]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-01.jpg
-[retrieving-ue-source-code]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-02.jpg
-[setting-solution-configuration-and-platform]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-03.jpg
+[unreal-engine-account-dashboard]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-01.jpg "Unreal Engine account dashboard"
+[retrieving-ue-source-code]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-02.jpg "Downloading UE4 source code"
+[setting-solution-configuration-and-platform]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-03.jpg "Setting solution configuration and platform"
 [building-ue4]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-04.jpg "Building Unreal Engine 4"
 
 
