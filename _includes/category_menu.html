@@ -39,7 +39,8 @@
       {% for subcat in cat[1] %}
         {% assign slugged_subcat=subcat[0] | slugify %}
         {% for url_subcat in cats %}
-          {% if slugged_subcat ==  url_subcat %}
+          {% assign slugified_url_subcat=url_subcat | slugify %}
+          {% if slugged_subcat ==  slugified_url_subcat %}
             {% if site.data.specialcase[subcat[0]] %}
               {% assign subcat_name=site.data.specialcase[subcat[0]] %}
             {% else %}
