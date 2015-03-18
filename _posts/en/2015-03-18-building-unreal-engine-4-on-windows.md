@@ -121,10 +121,10 @@ You can always refer to the references listed below for the most up-to-date info
 [EpicGamesOrg]: https://github.com/EpicGames "Epic Games Organization"
 
 
-[unreal-engine-account-dashboard]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-01.jpg "Unreal Engine account dashboard"
-[retrieving-ue-source-code]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-02.jpg "Downloading UE4 source code"
-[setting-solution-configuration-and-platform]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-03.jpg "Setting solution configuration and platform"
-[building-ue4]: https://dl.dropboxusercontent.com/u/22236346/hybridsyntax.com/building-unreal-engine-4-on-windows-04.jpg "Building Unreal Engine 4"
+[unreal-engine-account-dashboard]: http://res.cloudinary.com/hybrid-syntax/image/upload/v1426688828/hybridsyntax.com/building-unreal-engine-4-on-windows-01.jpg "Unreal Engine account dashboard"
+[retrieving-ue-source-code]: http://res.cloudinary.com/hybrid-syntax/image/upload/v1426688829/hybridsyntax.com/building-unreal-engine-4-on-windows-02.jpg "Downloading UE4 source code"
+[setting-solution-configuration-and-platform]: http://res.cloudinary.com/hybrid-syntax/image/upload/v1426688830/hybridsyntax.com/building-unreal-engine-4-on-windows-03.jpg "Setting solution configuration and platform"
+[building-ue4]: http://res.cloudinary.com/hybrid-syntax/image/upload/v1426688835/hybridsyntax.com/building-unreal-engine-4-on-windows-04.jpg "Building Unreal Engine 4"
 
 
 *[UE4]: Unreal Engine 4
