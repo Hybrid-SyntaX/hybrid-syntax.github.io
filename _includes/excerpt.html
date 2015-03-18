@@ -1,15 +1,25 @@
-<span class="post-meta">
-  {% if post.jalali_date %}
-    {{ post.jalali_date }}
-  {% else %}
-    {{ post.date | date: "%b %-d, %Y" }}
-  {% endif %}
-</span>
-<h2>
-  <a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a>
-  <div class="post-excerpt" lang="{{ post.lang }}" >
+<article id="{{ post.name }}">
+
+  <header>
+    <h2><a class="post-link" lang="{{ post.lang }}" href="{{ post.url  | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <section class="post-meta pull-right">
+      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+      {% if post.jalali_date %}
+        {{ post.jalali_date }}
+      {% else %}
+        {{ post.date | date: "%b %-d, %Y" }}
+      {% endif %}
+      •
+      <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>
+      {% include category_link.html cat=post.categories.first %}
+    </section>
+  </header>
+
+  <section class="post-excerpt" lang="{{ post.lang }}" >
   <p>
   {{ post.excerpt }}
   </p>
-</div>
-</h2>
+  </section>
+
+
+</article>

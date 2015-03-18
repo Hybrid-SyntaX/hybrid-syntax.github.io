@@ -1,10 +1,8 @@
 {% assign posts=include.posts | where:"lang", page.lang %}
 
 
-<ul class="post-list">
+<section class="post-list">
 {% for post in posts %}
-  <li>
     {% include excerpt.html %}
-  </li>
 {% endfor %}
-</ul>
+</section>

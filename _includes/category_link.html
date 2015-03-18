@@ -1,0 +1,13 @@
+{% assign first_cat_slug=include.cat | slugify %}
+{% for cat in site.data.categories %}
+  {% assign cat_slug=cat[0] | slugify %}
+  {% if first_cat_slug == cat_slug %}
+    {% if site.data.specialcase[cat] %}
+      {% assign cat_name=site.data.specialcase[cat] %}
+    {% else %}
+      {% assign cat_name=cat[0] %}
+    {% endif %}
+
+    <a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat_slug }}">{{ cat_name }}</a>
+  {% endif %}
+{% endfor %}
