@@ -9,6 +9,8 @@ categories:
 - PHP
 tags: php web-server
 lang: en
+references:
+- PHP built-in server|http://www.php.net/manual/en/features.commandline.webserver.php
 ---
 Since PHP 5.4 onward; PHP has been geared with a built-in server, which will come in handy when you want to test things quickly or just don’t feel like installing a web server!
 
@@ -26,4 +28,6 @@ Replace IP Address with either “localhost” or anything ranging from 127.0.0.
 
 Now if you open localhost:8008 in your browser you should be able to see your PHP files inside the chosen directory; It’s cool isn’t it?
 
-You can learn more about this on [PHP built-in server in the PHP website](http://www.php.net/manual/en/features.commandline.webserver.php)
+You can learn more about this on [PHP built-in server in the PHP website](http://www.php.net/manual/en/features.commandline.webserver.php){:external}
+
+{:external: rel="external" target="_blank" }
