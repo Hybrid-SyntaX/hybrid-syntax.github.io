@@ -102,6 +102,7 @@ pre
 .tags a, .tags a:visited
 {
   color:#828282;
+  display:inline-block;
 }
 .tags .glyphicon-tags:before
 {
@@ -151,6 +152,14 @@ pre
   background-position-y: 50%;
   background-position-x: 5%;
 }
+#big-logo
+{
+  background: url("/favicon.png");
+    background-repeat: no-repeat;
+    height: 80px;
+    padding-left: 75px;
+    font-size: 40pt;
+}
 
 a[rel="external"]:after
 {
@@ -167,4 +176,169 @@ a[rel="external"]:after
   color:gray;
   margin: 0px 5px 0px 5px;
   font-size:8pt;
+}
+.dark , .light
+{
+  padding:20px
+}
+.dark ul, .light ul
+{
+
+}
+.dark , .dark a, .dark li
+{
+  background-color:black;
+  color:white;
+
+}
+.light, .light a , .light li
+{
+  background-color:white;
+  color:black;
+}
+.dark li a , .light li a
+{
+  display:inline-block;
+  width:100%;
+}
+.dark a:hover , .light a:hover
+{
+  text-decoration:none;
+  cursor:hand;
+}
+.dark a:hover
+{
+  background-color:white;
+  color:black;
+}
+
+.light a:hover
+{
+  background-color:black;
+  color:white;
+}
+
+.light ul
+{
+  padding-right:35px
+}
+
+ul[lang="fa"],section[lang="fa"]
+{
+  direction:rtl;
+  font-family:'WMitra';
+  font-size:16pt !important;
+}
+blockquote[lang="fa"]
+{
+  font-size:18pt !important;
+  font-family:'WMitra';
+  border-right:5px solid #eee;
+  border-left:0 none transparent;
+
+}
+
+ul[lang="en"],section[lang="en"]
+{
+
+}
+.introduction[lang="en"]
+{
+  font-size: 11.5pt;
+}
+.social-icon
+{
+  background-repeat:no-repeat;
+  height: 49px;
+  display:inline-block;
+  width: 49px;
+
+}
+.icon-32
+{
+  background-size:32px;
+  width:32px;
+  height:32px;
+}
+.icon-24
+{
+  background-size:24px;
+  width:24px;
+  height:24px;
+}
+.icon-16
+{
+  background-size:16px;
+  width:16px;
+  height:16px;
+}
+/*
+.linkedin-icon
+{
+  background-image:url(/assets/icons/social_icons.png);
+  background-position: 0px 0px;
+  background-repeat:no-repeat;
+}
+.linkedin-icon:hover
+{
+  background-image:url(/assets/icons/social_icons.png);
+  background-position: 0px 50px;
+
+}
+*/
+.linkedin-icon
+{
+  background-image:url(/assets/icons/linkedin_icon.png);
+}
+.linkedin-icon:hover
+{
+  background-image:url(/assets/icons/linkedin_icon_hover.png);
+}
+.googleplus-icon
+{
+  background-image:url(/assets/icons/googleplus_icon.png);
+}
+.googleplus-icon:hover
+{
+  background-image:url(/assets/icons/googleplus_icon_hover.png);
+}
+.twitter-icon
+{
+  background-image:url(/assets/icons/twitter_icon.png);
+}
+.twitter-icon:hover
+{
+  background-image:url(/assets/icons/twitter_icon_hover.png);
+}
+.github-icon-black , .github-icon-white
+{
+  background-image:url(/assets/icons/github_icon.png);
+}
+.github-icon-white:hover
+{
+  background-image:url(/assets/icons/github_icon_hover.png);
+}
+.github-icon-black:hover
+{
+  background-image:url(/assets/icons/github_icon_hover_alt.png);
+}
+.rss-icon
+{
+  background-image:url(/assets/icons/rss_icon.png);
+}
+.rss-icon:hover
+{
+  background-image:url(/assets/icons/rss_icon_hover.png);
+}
+.email-icon-black, .email-icon-white
+{
+  background-image:url(/assets/icons/email_icon.png);
+}
+.email-icon-white:hover
+{
+  background-image:url(/assets/icons/email_icon_hover.png);
+}
+.email-icon-black:hover
+{
+  background-image:url(/assets/icons/email_icon_hover_alt.png);
 }

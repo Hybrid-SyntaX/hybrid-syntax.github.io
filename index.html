@@ -1,0 +1,87 @@
+---
+layout: barebone
+page_name: main_index
+lang: en
+isPage: true
+---
+{% assign posts_en=site.posts | where:"lang", "en" %}
+{% assign posts_fa=site.posts | where:"lang", "fa" %}
+
+<div class="wrapper">
+  <section class="row" >
+    <header class="row col-md-12">
+      <h1 id="big-logo" class="site-title navbar-brand" href="{{ site.baseurl }}/{{ page.lang }}">{{ site.title }}</h1>
+
+    </header>
+
+    <section class="row col-md-12">
+      <section lang="en" class="col-md-6 light introduction">
+        <p>Hi, I'm <a rel="external" href="{{ site.linkedin_url }}"><strong>Abbas Allahyari</strong></a>, jack of all trades!</p>
+
+        <p>
+          I'm pretty much in "exploration phase", learning many things which may be totally random, but one day they shall unite.
+        </p>
+
+        <p>
+          So far I have developed anything ranging from <strong>Websites</strong> to <strong>Desktop Applications</strong>. Currently I'm persuading <strong>Game Development</strong> and <strong>Artificial Intelligence</strong>, and other random stuffs.
+        </p>
+
+
+      </section>
+
+      <section lang="fa" class="col-md-6 dark introduction">
+        <p>سلام، من <a rel="external" href="{{ site.linkedin_url }}"><strong>عباس اللهیاری </strong></a>هستم، یک همه کاره!</p>
+
+        <p>
+          میشه گفت در «مرحله اکتشاف» هستم، چیزایی رو یاد می گیرم که شاید به هم ربطی نداشته باشند، ولی یک روزی ربط پیدا می کنند.
+          </p>
+
+        <p>
+          تا به امروز برنامه های مختلف از <strong>وبسایت</strong> تا <strong>دسکتاپ</strong> را توسعه دادم. و در حال حاضر به دنبال <strong>بازی سازی</strong> و <strong>هوش مصنوعی</strong> و چیز های دیگر هستم.
+        </p>
+
+
+      </section>
+    </section>
+    <section class="row col-md-12">
+
+      <section class="col-md-6 light" lang="en">
+        <blockquote>
+          <p>from one thing, know ten thousand things</p>
+          <footer>Miyamoto Musashi, <cite title="The Book of Five Rings">The Book of Five Rings</cite></footer>
+        </blockquote>
+      </section>
+      <section class="col-md-6 dark" lang="fa">
+        <blockquote lang="fa">
+          <p>از یک چیز، ده هزار چیز بدان</p>
+          <footer>میاموتو موساشی،<cite title="کتاب پنج حلقه">کتاب پنج حلقه</cite></footer>
+        </blockquote>
+      </section>
+
+  </section>
+
+    <section class="row col-md-12">
+      <section lang="en" class="col-md-6 dark">
+
+        <h2>Latest posts</h2>
+        <ul>
+          {% for post in posts_en %}
+          <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section lang="fa" class="col-md-6 light">
+        <h2>آخرین پست ها</h2>
+        <ul>
+          {% for post in posts_fa %}
+          <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </section>
+
+
+  </section>
+  {% include social_links.html color="black" %}
+</div>

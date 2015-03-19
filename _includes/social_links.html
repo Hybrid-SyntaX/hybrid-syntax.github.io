@@ -1,0 +1,10 @@
+<section class="row col-md-12" style="background-color:{{ include.color }};padding-top:15px;">
+  <ul class="list-inline col-md-6 col-md-offset-4">
+    <li><a href="http://{{ site.linkedin_url }}"><span class="social-icon linkedin-icon icon-24"></span></a></li>
+    <li><a href="http://{{ site.googleplus_url }}"><span class="social-icon googleplus-icon icon-24"></span></a></li>
+    <li><a href="https://github.com/{{ site.github_username }}"><span class="social-icon github-icon-{{ include.color }} icon-24"></span></a></li>
+    <li><a href="https://twitter.com/{{ site.twitter_username }}"><span class="social-icon twitter-icon icon-24"></span></a></li>
+    <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="social-icon rss-icon icon-24"></span></a></li>
+    <li><a href="mailto:hybrid.syntax@gmail.com"><span class="social-icon email-icon-{{ include.color }} icon-24"></span></a></li>
+  </ul>
+</section>

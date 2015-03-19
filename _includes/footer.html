@@ -4,8 +4,8 @@
   <div class="wrapper">
 
 
-    <div class="footer-col-wrapper">
-      <aside class="footer-col  footer-col-1">
+    <div class="row">
+      <aside class="col-md-6">
         <ul>
 
           <li>Categories
@@ -27,6 +27,7 @@
 
       </aside>
 
+<!--
       <aside class="footer-col  footer-col-2">
         <ul class="social-media-list">
           {% if site.github_username %}
@@ -89,16 +90,26 @@
 
         </ul>
       </aside>
+-->
 
-      <aside class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
+      <aside class="col-md-6">
+        <section class="text" lang="{{ page.lang }}">
+          {% if page.lang == 'en' %}
+            {% include en/about_me.html %}
+          {% else if page.lang == 'fa' %}
+            {% include fa/about_me.html %}
+          {% endif %}
+        </section>
 
-
+      </aside>
+      <aside class="col-md-12">
+          {% include social_links.html color="white" %}
       </aside>
     </div>
 
 
   </div>
+
   <script src="{{ "/assets/jquery/jquery-2.1.3.min.js" | prepend: site.baseurl }}" ></script>
   <script src="{{ "/assets/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}" ></script>
 </footer>
