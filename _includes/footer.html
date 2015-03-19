@@ -105,6 +105,13 @@
       <aside class="col-md-12">
           {% include social_links.html color="white" %}
       </aside>
+      <aside id="copyright" class="col-md-6 col-md-offset-3 text-center" lang="{{ page.lang }}">
+        {% if page.lang == 'en' %}
+          {% include en/copyright.html %}
+        {% else if page.lang == 'fa' %}
+          {% include fa/copyright.html %}
+        {% endif %}
+      </aside>
     </div>
 
 
