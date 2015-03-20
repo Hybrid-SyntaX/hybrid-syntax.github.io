@@ -70,7 +70,7 @@ gems:
   - jekyll-redirect-from
   - jekyll-sitemap
 
-exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag]
+exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag,README.md]
 
 tag_title_prefix: 'posts tagged '
 category_title_prefix: 'posts under '
