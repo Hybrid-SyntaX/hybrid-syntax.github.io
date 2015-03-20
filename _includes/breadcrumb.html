@@ -36,9 +36,8 @@
   {% endfor %}
   </ul>
   </li>
-  {{ url_breadcrumb_split.last | cgi_escape }}
-  {{ url_breadcrumb_split.last | uri_escape }}
-  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | cgi_escape | slugify }}'>/{{ url_breadcrumb_split.last }}</a></li>
+
+  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | slugify }}'>/{{ url_breadcrumb_split.last }}</a></li>
 {% else %}
   {% include category_menu.html cat=cat cats=categories %}
 {% endif %}
