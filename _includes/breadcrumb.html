@@ -36,7 +36,7 @@
   {% endfor %}
   </ul>
   </li>
-  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | slugify }}'>/{{ url_breadcrumb_split.last }}</a></li>
+  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | cgi_escape | slugify }}'>/{{ url_breadcrumb_split.last | cgi_escape }}</a></li>
 {% else %}
   {% include category_menu.html cat=cat cats=categories %}
 {% endif %}
