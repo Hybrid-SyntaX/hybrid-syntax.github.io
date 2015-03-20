@@ -254,61 +254,37 @@ ul[lang="en"],section[lang="en"]
   width: 49px;
 
 }
-.icon-32
-{
-  background-size:32px;
-  width:32px;
-  height:32px;
-}
-.icon-24
-{
-  background-size:24px;
-  width:24px;
-  height:24px;
-}
-.icon-16
-{
-  background-size:16px;
-  width:16px;
-  height:16px;
-}
-/*
-.linkedin-icon
-{
-  background-image:url(/assets/icons/social_icons.png);
-  background-position: 0px 0px;
-  background-repeat:no-repeat;
-}
-.linkedin-icon:hover
-{
-  background-image:url(/assets/icons/social_icons.png);
-  background-position: 0px 50px;
 
+@each $size  in (16,24,32) {
+    .icon-#{$size}
+    {
+      background-size:#{$size}px;
+      width:#{$size}px;
+      height:#{$size}px;
+    }
 }
-*/
-.linkedin-icon
-{
-  background-image:url(/assets/icons/linkedin_icon.png);
+
+@each $socialnet  in (linkedin,googleplus,twitter,rss) {
+
+  .#{$socialnet}-icon {
+    background-image:url(/assets/icons/#{$socialnet}_icon.png);
+  }
+  .#{$socialnet}-icon:hover {
+    background-image:url(/assets/icons/#{$socialnet}_icon_hover.png);
+  }
 }
-.linkedin-icon:hover
+
+.email-icon-black, .email-icon-white
 {
-  background-image:url(/assets/icons/linkedin_icon_hover.png);
+  background-image:url(/assets/icons/email_icon.png);
 }
-.googleplus-icon
+.email-icon-white:hover
 {
-  background-image:url(/assets/icons/googleplus_icon.png);
+  background-image:url(/assets/icons/email_icon_hover.png);
 }
-.googleplus-icon:hover
+.email-icon-black:hover
 {
-  background-image:url(/assets/icons/googleplus_icon_hover.png);
-}
-.twitter-icon
-{
-  background-image:url(/assets/icons/twitter_icon.png);
-}
-.twitter-icon:hover
-{
-  background-image:url(/assets/icons/twitter_icon_hover.png);
+  background-image:url(/assets/icons/email_icon_hover_alt.png);
 }
 .github-icon-black , .github-icon-white
 {
@@ -322,29 +298,34 @@ ul[lang="en"],section[lang="en"]
 {
   background-image:url(/assets/icons/github_icon_hover_alt.png);
 }
-.rss-icon
-{
-  background-image:url(/assets/icons/rss_icon.png);
-}
-.rss-icon:hover
-{
-  background-image:url(/assets/icons/rss_icon_hover.png);
-}
-.email-icon-black, .email-icon-white
-{
-  background-image:url(/assets/icons/email_icon.png);
-}
-.email-icon-white:hover
-{
-  background-image:url(/assets/icons/email_icon_hover.png);
-}
-.email-icon-black:hover
-{
-  background-image:url(/assets/icons/email_icon_hover_alt.png);
-}
+
+
 #copyright[lang="fa"]
 {
   font-family: 'WMitra';
   direction:rtl;
   font-size:14pt;
+}
+
+
+$base-heading-font-size:8px;
+[lang="fa"] {
+
+  $i:7;
+  @each $header  in (h1,h2,h3,h4,h5,h6) {
+
+    #{$header} {
+      font-size: $base-heading-font-size * ($i);
+    }
+    $i: $i - 1;
+  }
+
+}
+[lang="fa"] ul
+{
+  padding-right:35px
+}
+[lang="en"]
+{
+  font-family: $base-font-family;
 }

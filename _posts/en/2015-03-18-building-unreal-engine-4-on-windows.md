@@ -73,7 +73,7 @@ In order to compile and build UE4 you need Visual Studio 2013 at least, which is
 #### Step 5: Run Setup.bat to download binary files ####
 {: #step-5}
 
-Now you go the directory which you cloned/extracted the repository and run a batch scrip named `Setup.bat`
+Now you go the directory which you cloned/extracted the repository and run a batch script named `Setup.bat`
 By running this script, you download necessary binary files in order build and run UE4, which is roughly around 3.5GB.
 
 If you're going to develop for other platforms such as Android and/or HTML5 you need to download Android NDK and Emscripten respectively; once Setup.bat detects their presence it will download the necessary files for Android and/or HTML5 support; you can visit [Unreal Engine's GitHub repository page][ue4-github-repo]{:external} for my information.
