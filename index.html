@@ -18,29 +18,25 @@ isPage: true
       <section lang="en" class="col-md-6 light introduction">
           {% include en/about_me.html %}
       </section>
-
       <section lang="fa" class="col-md-6 dark introduction">
           {% include fa/about_me.html %}
       </section>
-    </section>
-    <section class="row col-md-12">
-
-      <section class="col-md-6 light" lang="en">
-        <blockquote>
+      <section class="col-md-6 light">
+        <blockquote style="padding-bottom: 0;">
           <p>from one thing, know ten thousand things</p>
           <footer>Miyamoto Musashi, <cite title="The Book of Five Rings">The Book of Five Rings</cite></footer>
         </blockquote>
       </section>
-      <section class="col-md-6 dark" lang="fa">
+      <section class="col-md-6 dark">
         <blockquote lang="fa">
           <p>از یک چیز، ده هزار چیز بدان</p>
           <footer>میاموتو موساشی،<cite title="کتاب پنج حلقه">کتاب پنج حلقه</cite></footer>
         </blockquote>
       </section>
-
     </section>
+
     <section class="row col-md-12">
-      <section lang="en" class="col-md-6 dark">
+      <section lang="en" class="col-md-6 dark latest-posts">
         <h2>Latest posts</h2>
         <ul>
           {% for post in posts_en %}
@@ -49,7 +45,7 @@ isPage: true
         </ul>
       </section>
 
-      <section lang="fa" class="col-md-6 light">
+      <section lang="fa" class="col-md-6 light latest-posts">
         <h2>آخرین پست ها</h2>
         <ul>
           {% for post in posts_fa %}

@@ -180,6 +180,19 @@ a[rel="external"]:after
 .dark , .light
 {
   padding:20px
+
+}
+.latest-posts[lang="en"]
+{
+  line-height: 35px;
+}
+.latest-posts[lang="fa"]
+{
+  line-height: 35px;
+}
+.latest-posts[lang="fa"] h2
+{
+  font-size:35px;
 }
 .dark ul, .light ul
 {
@@ -235,6 +248,7 @@ blockquote[lang="fa"]
   font-family:'WMitra';
   border-right:5px solid #eee;
   border-left:0 none transparent;
+  direction:rtl;
 
 }
 
