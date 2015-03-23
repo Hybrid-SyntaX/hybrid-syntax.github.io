@@ -1,0 +1,16 @@
+{% assign post=include.post %}
+
+{% if page.isCategory or page.isTag or page.isPage %}
+  {% assign things=site.pages | where:"page_name", page.page_name | sort: 'path' %}
+{% else %}
+  {% assign things=site.posts | where:"name", page.name | sort: 'path' %}
+{% endif %}
+
+<li>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >/{{ page.lang }}<span class="caret"></span></a>
+  <ul class='dropdown-menu' role='menu'>
+  {% for post in things %}
+    {% include language_link.html post=post %}
+  {% endfor %}
+  </ul>
+</li>

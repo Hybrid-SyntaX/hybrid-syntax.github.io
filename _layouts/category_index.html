@@ -1,0 +1,31 @@
+---
+layout: default
+isCategory: true
+---
+<div class="home" lang="{{ page.lang }}">
+{% assign meta_split=page.url  | split: '/' %}
+
+{% assign meta_split_len=meta_split | size %}
+
+{% assign meta_value_index=meta_split_len | minus: 2 %}
+
+{% assign meta_name=meta_split[3] %}
+
+{% assign meta_value=meta_split[meta_value_index] %}
+
+{% if site.metas[meta_name].slugify %}
+  {% assign meta_unslug_value=meta_value | replace: '-',' ' %}
+{% else if %}
+  {% assign meta_unslug_value=meta_value %}
+{% endif %}
+
+{% assign meta_plural_name=site.metas[meta_name].plural %}
+
+
+{% assign posts_in_tag=site.[meta_plural_name].[meta_unslug_value] %}
+
+{% include posts_list.html posts=posts_in_tag %}
+
+
+
+</div>

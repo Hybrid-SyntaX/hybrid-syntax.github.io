@@ -5,11 +5,11 @@ email: abbas@hybridsyntax.com
 description: > # this means to ignore newlines until "baseurl:"
   Abbas Allahyari's personal blog
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://hybridsyntax.com" # the base hostname & protocol for your site
+url: "http://www.hybridsyntax.com" # the base hostname & protocol for your site
 twitter_username: hybrid_syntax
 github_username:  hybrid-syntax
 author: Abbas Allahyari
-linkedin_url : ir.linkedin.com/pub/abbas-allahyari/69/b09/660
+linkedin_url : Http://ir.linkedin.com/pub/abbas-allahyari/69/b09/660
 googleplus_url: https://plus.google.com/u/0/117835603692279264063/
 # Build settings
 markdown: kramdown
@@ -21,17 +21,21 @@ defaults:
   -
     scope:
       type: posts
-      lang: en
+      path: "en"
     values:
-      permalink: /en/blog/:title
+      layout: default
+      permalink: en/blog/:title
+
   -
     scope:
       type: posts
-      lang: fa
+      path: "fa"
     values:
-      permalink: /fa/blog/:title
+      layout: default
+      permalink: fa/blog/:title
 
 
+permalink: :title
 
 t:
   en:
@@ -61,3 +65,14 @@ metas:
   category:
     slugify: true
     plural: categories
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag,README.md]
+
+tag_title_prefix: 'posts tagged '
+category_title_prefix: 'posts under '
+tag_dir: blog/tag
+category_dir: blog/category

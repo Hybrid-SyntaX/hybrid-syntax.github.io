@@ -1,0 +1,43 @@
+{% assign last_cat="" %}
+
+{% if page.url contains site.category_dir and page.isCategory and false %}
+  {% assign type_literal="&nbsp;Category" %}
+{% else if page.url contains site.tag_dir and page.isTag and false %}
+  {% assign type_literal="&nbsp;Tag" %}
+{% else %}
+  {% assign type_literal="" %}
+{% endif %}
+
+{% assign url_breadcrumb_split=page.url | remove: '/en' | remove : '/fa'  | remove: '/index.html' %}
+{% assign url_breadcrumb_split=url_breadcrumb_split | remove :'/category' | remove: '/tag' | remove: '/blog' %}
+{% assign url_breadcrumb_split=url_breadcrumb_split | strip | split: '/' %}
+
+
+
+{% if page.url contains site.category_dir or page.url contains site.tag_dir %}
+
+
+  {% assign categories=url_breadcrumb_split  %}
+
+{% else %}
+  {% assign categories=page.categories %}
+{% endif %}
+
+{% assign categories.last="Category" %}
+
+
+
+{% if page.url contains site.tag_dir and page.isTag %}
+  <li>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >/Tag<span class="caret"></span></a>
+  <ul class='dropdown-menu' role='menu'>
+  {% for tag in site.tags %}
+    <li><a href="/{{ page.lang }}/{{ site.tag_dir }}/{{ tag[0] }}">{{ tag[0]}} (<span>{{ tag[1].size }})</span></a></li>
+  {% endfor %}
+  </ul>
+  </li>
+
+  <li><a href='/{{ page.lang }}/{{ site.tag_dir }}/{{ url_breadcrumb_split.last | slugify }}'>/{{ url_breadcrumb_split.last }}</a></li>
+{% else %}
+  {% include category_menu.html cat=cat cats=categories %}
+{% endif %}

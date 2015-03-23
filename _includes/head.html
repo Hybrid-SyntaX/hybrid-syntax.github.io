@@ -3,17 +3,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <title>{% if page.title %}{{ page.title }}&nbsp;|&nbsp;{{ site.name }}{% else %}{{ site.name}}&nbsp;|&nbsp;{{ site.description }}{% endif %}</title>
+
+
+  {% if page.canonical %}
+    <meta http-equiv="refresh" content="0; url={{ page.canonical | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.canonical | prepend: site.baseurl | prepend: site.url }}">
+  {% endif %}
+  
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  
-{% assign posts=site.posts | where:"name", page.name %}
-	{% for post in posts %}
-	{% if post.lang != page.lang %}
-		<link rel="alternate" hreflang="{{post.lang}}" href="{{ post.url  | prepend: site.baseurl }}" />
-	{% endif %}
+  <link rel="stylesheet" href="{{ "/css/bootstrap-submenu.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="{{ "/assets/fonts/WebMitra.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/fonts/WebYekan.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="{{ "/assets/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/bootstrap/css/bootstrap-theme.min.css" | prepend: site.baseurl }}">
+
+
+
+
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
+  <meta name="author" content="{{ site.author }}">
+
+{% if page.isCategory or page.isTag or page.isPage %}
+  {% assign things=site.pages | where:"page_name", page.page_name | sort: 'path' %}
+{% else %}
+  {% assign things=site.posts | where:"name", page.name | sort: 'path' %}
+  <link rel="author" href="http://https//plus.google.com/u/0/117835603692279264063/" />
+{% endif %}
+
+{% for post in things %}
+  {% if page.lang != post.lang %}
+  <link rel="alternate" hreflang="{{post.lang}}" href="{{ post.url  | prepend: site.baseurl }}" />
+  {% endif %}
 {% endfor %}
+
+<script  type="text/javascript">
+
+var disqus_shortname = 'hybridsyntax';
+
+var disqus_config = function () {
+  this.language = "{{ page.lang }}";
+};
+
+</script>
 </head>

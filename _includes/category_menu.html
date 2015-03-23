@@ -1,0 +1,57 @@
+{% assign current_cat=include.cat | replace: '-',' ' | downcase %}
+{% assign cats=include.cats %}
+
+{% if page.isCategory and page.url contains site.category_dir %}
+{% include main_category_menu.html %}
+{% endif %}
+{% for cat in site.data.categories %}
+
+
+  {% assign slugged_cat=cat[0] | slugify %}
+  {%  for url_cat in cats %}
+    {% assign slugified_url_cat=url_cat | slugify %}
+
+    {% if slugified_url_cat == slugged_cat %}
+
+      {% if site.data.specialcase[cat] %}
+        {% assign cat_name=site.data.specialcase[cat] %}
+      {% else %}
+        {% assign cat_name=cat[0] %}
+      {% endif %}
+
+      <li>
+          {% if cat[1].first[0] == "<nochild>" %}
+          <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" role="link" >/{{ cat_name }}</span></a>
+          {% else %}
+          <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >/{{ cat_name }}<span class="caret"></span></a>
+          <ul class='dropdown-menu' role='menu'>
+            {% for subcat in cat[1] %}
+              {% if site.data.specialcase[subcat[0]] %}
+                {% assign subcat_name=site.data.specialcase[subcat[0]] %}
+              {% else %}
+                {% assign subcat_name=subcat[0] %}
+              {% endif %}
+              <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}">{{ subcat_name }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+      </li>
+      {% for subcat in cat[1] %}
+        {% assign slugged_subcat=subcat[0] | slugify %}
+        {% for url_subcat in cats %}
+          {% assign slugified_url_subcat=url_subcat | slugify %}
+          {% if slugged_subcat ==  slugified_url_subcat %}
+            {% if site.data.specialcase[subcat[0]] %}
+              {% assign subcat_name=site.data.specialcase[subcat[0]] %}
+            {% else %}
+              {% assign subcat_name=subcat[0] %}
+            {% endif %}
+            <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}">/{{ subcat_name }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}

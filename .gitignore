@@ -2,3 +2,5 @@ _site
 .sass-cache
 serve.bat
 _plugins
+_images
+_svg

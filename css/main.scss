@@ -7,6 +7,7 @@
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
+$base-persian-font-family: 'WMitra';
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -70,26 +71,275 @@ $on-laptop:        800px;
 code
 {
     background-color:#F9F9F9;
+    direction:ltr;
+    font-size:10pt;
 }
 pre
 {
     background-color:#F9F9F9;
     overflow-x:auto;
+    direction:ltr;
+    font-size:10pt;
 }
-.home[lang='fa']
+.home[lang='fa'], .post[lang='fa']
 {
   direction: rtl;
+  font-family: 'WMitra';
 }
+
 .tags
 {
 
 }
-.tags a
+.tags li
 {
   background-color:#F9F9F9;
   padding: 5px;
+  font-family: serf !important;
+  font-size: 14pt;
+
 }
-.tags a:hover
+.tags a, .tags a:visited
+{
+  color:#828282;
+  display:inline-block;
+}
+.tags .glyphicon-tags:before
+{
+  margin: 10px;
+  font-size: 75%;
+}
+.tags li:hover , .tags a:hover
 {
   background-color:#C9C9C9;
+  color: #333333;
+}
+#language-selecter
+{
+  float: left;
+  top: 20px;
+  position: relative;
+  left: 10px;
+}
+#categories *
+{
+  list-style:none;
+}
+.post-excerpt[lang="en"]
+{
+  font-size:12pt !important;
+}
+.post-excerpt[lang="fa"]
+{
+  font-size:18pt !important;
+}
+.social-media-list
+{
+  width: 160px;
+}
+
+
+.post-content[lang="fa"]
+{
+  font-size:18pt !important;
+}
+#logo
+{
+  background: url('/favicon.png');
+  background-repeat: no-repeat;
+  background-size: 40px;
+  padding-left: 55px;
+  background-position-y: 50%;
+  background-position-x: 5%;
+}
+#big-logo
+{
+  background: url("/favicon.png");
+    background-repeat: no-repeat;
+    height: 80px;
+    padding-left: 75px;
+    font-size: 40pt;
+}
+
+a[rel="external"]:after
+{
+  content: "\e164";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:gray;
+  margin: 0px 5px 0px 5px;
+  font-size:8pt;
+}
+.dark , .light
+{
+  padding:20px
+
+}
+.latest-posts[lang="en"]
+{
+  line-height: 35px;
+}
+.latest-posts[lang="fa"]
+{
+  line-height: 35px;
+}
+.latest-posts[lang="fa"] h2
+{
+  font-size:35px;
+}
+.dark ul, .light ul
+{
+
+}
+.dark , .dark a, .dark li
+{
+  background-color:black;
+  color:white;
+
+}
+.light, .light a , .light li
+{
+  background-color:white;
+  color:black;
+}
+.dark li a , .light li a
+{
+  display:inline-block;
+  width:100%;
+}
+.dark a:hover , .light a:hover
+{
+  text-decoration:none;
+  cursor:hand;
+}
+.dark a:hover
+{
+  background-color:white;
+  color:black;
+}
+
+.light a:hover
+{
+  background-color:black;
+  color:white;
+}
+
+.light ul
+{
+  padding-right:35px
+}
+
+ul[lang="fa"],section[lang="fa"]
+{
+  direction:rtl;
+  font-family:'WMitra';
+  font-size:16pt !important;
+}
+blockquote[lang="fa"]
+{
+  font-size:18pt !important;
+  font-family:'WMitra';
+  border-right:5px solid #eee;
+  border-left:0 none transparent;
+  direction:rtl;
+
+}
+
+ul[lang="en"],section[lang="en"]
+{
+
+}
+.introduction[lang="en"]
+{
+  font-size: 11.5pt;
+}
+.social-icon
+{
+  background-repeat:no-repeat;
+  height: 49px;
+  display:inline-block;
+  width: 49px;
+
+}
+
+@each $size  in (16,24,32) {
+    .icon-#{$size}
+    {
+      background-size:#{$size}px;
+      width:#{$size}px;
+      height:#{$size}px;
+    }
+}
+
+@each $socialnet  in (linkedin,googleplus,twitter,rss) {
+
+  .#{$socialnet}-icon {
+    background-image:url(/assets/icons/#{$socialnet}_icon.png);
+  }
+  .#{$socialnet}-icon:hover {
+    background-image:url(/assets/icons/#{$socialnet}_icon_hover.png);
+  }
+}
+
+.email-icon-black, .email-icon-white
+{
+  background-image:url(/assets/icons/email_icon.png);
+}
+.email-icon-white:hover
+{
+  background-image:url(/assets/icons/email_icon_hover.png);
+}
+.email-icon-black:hover
+{
+  background-image:url(/assets/icons/email_icon_hover_alt.png);
+}
+.github-icon-black , .github-icon-white
+{
+  background-image:url(/assets/icons/github_icon.png);
+}
+.github-icon-white:hover
+{
+  background-image:url(/assets/icons/github_icon_hover.png);
+}
+.github-icon-black:hover
+{
+  background-image:url(/assets/icons/github_icon_hover_alt.png);
+}
+
+
+#copyright[lang="fa"]
+{
+  font-family: 'WMitra';
+  direction:rtl;
+  font-size:14pt;
+}
+
+
+$base-heading-font-size:8px;
+[lang="fa"] {
+
+  $i:7;
+  @each $header  in (h1,h2,h3,h4,h5,h6) {
+
+    #{$header} {
+      font-size: $base-heading-font-size * ($i);
+    }
+    $i: $i - 1;
+  }
+
+}
+[lang="fa"] ul
+{
+  padding-right:35px
+}
+[lang="en"]
+{
+  font-family: $base-font-family;
 }

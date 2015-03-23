@@ -1,0 +1,13 @@
+<li>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >/Category<span class="caret"></span></a>
+<ul class='dropdown-menu' role='menu'>
+{% for cat in site.data.categories %}
+  {% if site.data.specialcase[cat] %}
+    {% assign main_cat_name=site.data.specialcase[cat] %}
+  {% else %}
+    {% assign main_cat_name=cat[0] %}
+  {% endif %}
+  <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" role="link" >{{ main_cat_name }} (<span>{{ cat[1].size }})</span></span></a></li>
+{% endfor %}
+</ul>
+</li>
