@@ -4,7 +4,7 @@ title:  "Building Unreal Engine 4 on Windows"
 name: building-unreal-engine-4-on-windows
 author: Abbas Allahyari
 date:   2015-03-18 16:45:27
-permalink: /en/blog/building-unreal-engine-4-on-windows
+permalink: /en/blog/building-unreal-engine-4-on-windows.html
 categories:
 - Game Dev
 - Game Engines

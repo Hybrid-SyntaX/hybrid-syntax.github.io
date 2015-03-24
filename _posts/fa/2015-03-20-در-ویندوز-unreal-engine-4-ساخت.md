@@ -5,7 +5,7 @@ name: building-unreal-engine-4-on-windows
 author: Abbas Allahyari
 date:   2015-03-20 14:58:27
 jalali_date: 1393-12-29
-permalink: /fa/blog/در-ویندوز-unreal-engine-4-ساخت
+permalink: /fa/blog/در-ویندوز-unreal-engine-4-ساخت.html
 categories:
 - Game Dev
 - Game Engines
