@@ -4,9 +4,9 @@ layout: default
 
 <article class="post" lang="{{ page.lang }}">
   <header class="post-header">
-    <aside>
+
       <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-meta">
+      <aside class="post-meta">
 
         <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
         {% if page.lang == "en" %}
@@ -17,8 +17,7 @@ layout: default
 
 
         {% if site.author %} • <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ site.author }}{% endif %}
-      </p>
-    </aside>
+      </aside>
   </header>
 
   <article class="post-content" lang="{{ page.lang }}">
