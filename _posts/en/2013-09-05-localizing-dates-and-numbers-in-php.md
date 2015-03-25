@@ -3,7 +3,7 @@ layout: post
 title:  "Localizing Dates and Numbers in PHP"
 name: localizing-dates-and-numbers-in-php
 date:   2013-09-05 10:27:27
-permalink: /en/blog/localizing-dates-and-numbers-in-php
+permalink: /en/blog/localizing-dates-and-numbers-in-php.html
 author: Abbas Allahyari
 categories:
 - Web Dev

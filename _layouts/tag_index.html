@@ -15,6 +15,10 @@ isTag: true
   {% assign meta_value=meta_split[3] %}
 {% endif %}
 
+{% if site.tag_inc_ext == true %}
+  {% assign meta_value=meta_value | remove: '.html' %}
+{% endif %}
+
 {% if site.metas[meta_name].slugify %}
   {% assign meta_unslug_value=meta_value | replace: '-',' ' %}
 {% else if %}

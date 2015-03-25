@@ -24,7 +24,7 @@ defaults:
       path: "en"
     values:
       layout: default
-      permalink: en/blog/:title
+      #permalink: en/blog/:title.html
 
   -
     scope:
@@ -32,10 +32,10 @@ defaults:
       path: "fa"
     values:
       layout: default
-      permalink: fa/blog/:title
+      #permalink: fa/blog/:title.html
 
 
-permalink: :title
+permalink: :title.html
 
 t:
   en:
@@ -70,9 +70,11 @@ gems:
   - jekyll-redirect-from
   - jekyll-sitemap
 
-#exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag,README.md]
+exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag,README.md]
 
 tag_title_prefix: 'posts tagged '
 category_title_prefix: 'posts under '
 tag_dir: blog/tag
+tag_inc_ext: true
 category_dir: blog/category
+category_inc_ext: true

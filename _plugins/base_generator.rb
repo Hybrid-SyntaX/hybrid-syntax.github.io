@@ -5,6 +5,9 @@ module Jekyll
       @base = base
       @dir = dir
       @name = 'index.html'
+      if site.config["#{meta_name}_inc_ext"]
+        @name = "#{meta_value}.html"
+      end
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), "#{meta_name}_index.html")

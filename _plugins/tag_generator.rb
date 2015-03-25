@@ -22,7 +22,11 @@ module Jekyll
             if lang[1]['default']==false
               #dir="#{lang[0]}/#{dir}"
             end
-            site.pages << BasePage.new(site, site.source, File.join("#{lang[0]}/#{dir}", meta_value_slug), @meta_name, meta_value_slug,lang[0])
+            if site.config['category_inc_ext'] == true
+              site.pages << BasePage.new(site, site.source, File.join("#{lang[0]}/#{dir}"), @meta_name, meta_value_slug,lang[0])
+            else
+              site.pages << BasePage.new(site, site.source, File.join("#{lang[0]}/#{dir}", meta_value_slug), @meta_name, meta_value_slug,lang[0])
+            end
           end
 
         end

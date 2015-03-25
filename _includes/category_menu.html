@@ -21,9 +21,9 @@
 
       <li>
           {% if cat[1].first[0] == "<nochild>" %}
-          <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" role="link" >/{{ cat_name }}</span></a>
+          <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}.html" role="link" >/{{ cat_name }}</span></a>
           {% else %}
-          <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >/{{ cat_name }}<span class="caret"></span></a>
+          <a href="/{{ page.lang }}/{{ site.category_dir }}/{{cat[0] | downcase | slugify }}.html" class="dropdown-toggle" data-toggle="dropdown" role="link" aria-expanded="false" >/{{ cat_name }}<span class="caret"></span></a>
           <ul class='dropdown-menu' role='menu'>
             {% for subcat in cat[1] %}
               {% if site.data.specialcase[subcat[0]] %}
@@ -31,7 +31,7 @@
               {% else %}
                 {% assign subcat_name=subcat[0] %}
               {% endif %}
-              <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}">{{ subcat_name }}</a></li>
+              <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}.html">{{ subcat_name }}</a></li>
             {% endfor %}
           </ul>
           {% endif %}
@@ -46,7 +46,7 @@
             {% else %}
               {% assign subcat_name=subcat[0] %}
             {% endif %}
-            <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}">/{{ subcat_name }}</a></li>
+            <li><a href="/{{ page.lang }}/{{ site.category_dir }}/{{ cat[0] | downcase | slugify }}/{{ subcat[0] | downcase | slugify }}.html">/{{ subcat_name }}</a></li>
           {% endif %}
         {% endfor %}
       {% endfor %}

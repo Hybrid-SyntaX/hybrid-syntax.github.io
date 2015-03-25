@@ -4,7 +4,7 @@ title:  "Hello, World!"
 name: hello-world
 author: Abbas Allahyari
 date:   2013-09-04 10:27:27
-permalink: /en/blog/hello-world
+permalink: /en/blog/hello-world.html
 categories:
 - Random
 lang: en
