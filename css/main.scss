@@ -267,6 +267,7 @@ ul[lang="en"],section[lang="en"]
   display:inline-block;
   width: 49px;
 
+
 }
 
 @each $size  in (16,24,32) {
@@ -275,6 +276,7 @@ ul[lang="en"],section[lang="en"]
       background-size:#{$size}px;
       width:#{$size}px;
       height:#{$size}px;
+      font-size:#{$size}px;
     }
 }
 
@@ -342,4 +344,22 @@ $base-heading-font-size:8px;
 [lang="en"]
 {
   font-family: $base-font-family;
+}
+#social-icons .white
+{
+  color:black;
+}
+
+#social-icons .white:hover
+{
+  color:grey;
+}
+#social-icons .black
+{
+  color:white;
+}
+
+#social-icons .black:hover
+{
+  color:grey;
 }
