@@ -16,7 +16,7 @@ So have you just created a nice shiny class implementing [SingletonPattern]{:ext
 
 This is an example of an [innocent] singleton class.
 
-{% highlight csharp %}
+```csharp
     class Singleton
     {
       private Singleton instance;
@@ -30,7 +30,7 @@ This is an example of an [innocent] singleton class.
       {
       }
     }
-{% endhighlight %}
+```
 
 The problem is when a new instance of a Singleton class is created; that stays in memory for the lifetime of application, and since each unit test is supposed to be ran independently, this charactristics of Singleton class causes problems.
 
@@ -38,7 +38,7 @@ A solution is to "break" the pattern and add a new method for "resetting" the Si
 
 Here's the purposed solution
 
-{% highlight csharp %}
+```csharp
     class Singleton
     {
       private Singleton instance;
@@ -56,6 +56,6 @@ Here's the purposed solution
       {
       }
     }
-{% endhighlight %}
+```
 
 [SingletonPattern]: https://en.wikipedia.org/wiki/Singleton_pattern "Singleton Pattern"
