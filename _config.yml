@@ -15,7 +15,7 @@ googleplus_url: https://plus.google.com/u/0/117835603692279264063/
 markdown: kramdown
 encoding: utf-8
 timezone: Asia/Tehran
-auto: true
+#auto: true
 
 defaults:
   -
