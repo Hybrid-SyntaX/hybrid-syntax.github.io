@@ -8,7 +8,7 @@ permalink: /en/blog/tests-and-singleton-singleton-with-benefits!.html
 categories:
 - Soft Dev
 - Unit Test
-tags: unit-test c# visual-studio singleton desing-pattern test
+tags: unit-test c# visual-studio singleton desigg-pattern test
 lang: en
 ---
 
