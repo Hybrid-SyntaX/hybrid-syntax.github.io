@@ -13,6 +13,7 @@ linkedin_url : Http://ir.linkedin.com/pub/abbas-allahyari/69/b09/660
 googleplus_url: https://plus.google.com/u/0/117835603692279264063/
 # Build settings
 markdown: kramdown
+highlighter: rouge
 encoding: utf-8
 timezone: Asia/Tehran
 #auto: true

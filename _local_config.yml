@@ -13,6 +13,7 @@ linkedin_url : Http://ir.linkedin.com/pub/abbas-allahyari/69/b09/660
 googleplus_url: https://plus.google.com/u/0/117835603692279264063/
 # Build settings
 markdown: kramdown
+highlighter: rouge
 encoding: utf-8
 timezone: Asia/Tehran
 #auto: true
@@ -70,11 +71,15 @@ gems:
   - jekyll-redirect-from
   - jekyll-sitemap
 
-exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag,README.md]
-
 tag_title_prefix: 'posts tagged '
 category_title_prefix: 'posts under '
 tag_dir: blog/tag
 tag_inc_ext: true
 category_dir: blog/category
 category_inc_ext: true
+
+## This part is for local only ##
+exclude: [fa/blog/category,fa/blog/tag,en/blog/category,en/blog/tag,README.md]
+show_drafts: true
+future: true
+#lsi: true

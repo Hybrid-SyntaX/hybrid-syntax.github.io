@@ -23,8 +23,9 @@ The answer is simple PHP [Internationalization](http://php.net/manual/en/book.in
 This is how it’s done. first of all you got to make sure that extension enabled. try running this code; In the returned array you should be able to find “intl”.
 
 
-
-    get_loaded_extensions();
+```php
+get_loaded_extensions();
+```
 
 if it’s not there, you got to edit php.ini file and uncomment  the following line.
 
@@ -39,14 +40,15 @@ Restart the server, and now you’re ready to see some magic!
 Now you use [IntlDateFormatter class](http://php.net/manual/en/class.intldateformatter.php){:external}, in order to localize dates; The following code snippet shows how it’s done.
 
 
+```php
+$date_format='EEEE، d MMMM Y';
 
-    $date_format='EEEE، d MMMM Y';
+$fmt = new IntlDateFormatter("fa_IR@calendar=persian", IntlDateFormatter::FULL, IntlDateFormatter::FULL,
 
-    $fmt = new IntlDateFormatter("fa_IR@calendar=persian", IntlDateFormatter::FULL, IntlDateFormatter::FULL,
+"Asia/Tehran", IntlDateFormatter::TRADITIONAL,$date_format);
 
-    "Asia/Tehran", IntlDateFormatter::TRADITIONAL,$date_format);
-
-     echo $fmt->format(intval(time()));
+ echo $fmt->format(intval(time()));
+```
 
 And now you get the today’s date in Persian calendar which is
 
@@ -63,9 +65,10 @@ The good news, you still use the same extension that you just enabled earlier. n
 This time you use [NumberFormatter class](http://php.net/manual/en/class.numberformatter.php){:external}. the following code prints 1337 number in Persian.
 
 
-
-    $persianNumberFormatter=new NumberFormatter("fa_IR",NumberFormatter::IGNORE);
-    echo $persianNumberFormatter->format(1337);
+```php
+$persianNumberFormatter=new NumberFormatter("fa_IR",NumberFormatter::IGNORE);
+echo $persianNumberFormatter->format(1337);
+```
 
 which results in
 
