@@ -5,7 +5,7 @@ email: abbas@hybridsyntax.com
 description: > # this means to ignore newlines until "baseurl:"
   Abbas Allahyari's personal blog
 baseurl: "" # the subpath of your site, e.g. /blog/
-#url: "http://www.hybridsyntax.com" # the base hostname & protocol for your site
+url: "http://www.hybridsyntax.com" # the base hostname & protocol for your site
 twitter_username: hybrid_syntax
 github_username:  hybrid-syntax
 author: Abbas Allahyari
